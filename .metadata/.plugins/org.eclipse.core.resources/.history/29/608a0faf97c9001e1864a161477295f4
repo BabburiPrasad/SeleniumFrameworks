@@ -1,0 +1,80 @@
+package SeleniumWebdriverPractice.com.datadriven;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class DDRegistration 
+{
+	public static WebDriver driver;
+	String baseURL = "https://naveenautomationlabs.com/opencart/index.php?route=account/login";
+	
+	@SuppressWarnings("deprecation")
+	@Test(dataProvider="testdata")
+	public void register(String firstname, String lastname, String email, String password, String cnfpassword, int phone)
+	{
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(baseURL);
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		driver.findElement(By.xpath("//a[@class='btn btn-primary']")).click();
+		
+		WebElement fnamebox = driver.findElement(By.xpath("//input[@id='input-firstname']"));
+		fnamebox.clear();
+		fnamebox.sendKeys(firstname);
+		
+		WebElement lname = driver.findElement(By.xpath("//input[@id='input-lastname']"));
+		lname.clear();
+		lname.sendKeys(lastname);
+		
+		WebElement phonenum = driver.findElement(By.xpath("//input[@id='input-telephone']"));
+		phonenum.clear();
+		phonenum.sendKeys(phone);
+		
+		WebElement passwd = driver.findElement(By.xpath("//input[@id='input-password']"));
+		passwd.clear();
+		passwd.sendKeys(null);
+		
+		WebElement cnpasswd = driver.findElement(By.xpath("//input[@id='input-confirm']"));
+		cnpasswd.clear();
+		cnpasswd.sendKeys(null);
+		
+		WebElement subscribe = driver.findElement(By.xpath("(//input[@type='radio'])[3]"));
+		subscribe.click();
+		
+		WebElement checkbox = driver.findElement(By.xpath("//input[@type='checkbox']"));
+		checkbox.click();
+		
+		WebElement contnue = driver.findElement(By.xpath("//input[@value='Continue']"));
+		contnue.click();
+		
+	}
+	
+	@DataProvider(name="testdata")
+	public Object[][] testData()
+	{
+		ReadExcelFile config = new ReadExcelFile();
+		int rows = config.getRowCount(0);
+		
+		Object[][] reg_details = new Object[rows][2];
+		
+		reg_details[0][0] = config.getData(0, rows, 0);
+		reg_details[1][0] = config.getData(1, rows, 1);
+		reg_details[2][0] = config.getData(2, rows, 0);
+		reg_details[3][0] = config.getData(3, rows, 0);
+		reg_details[4][0] = config.getData(4, rows, 0);
+		reg_details[5][0] = config.getData(5, rows, 0);
+		
+		
+		return reg_details;
+		
+	}
+
+}

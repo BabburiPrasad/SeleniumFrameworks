@@ -1,0 +1,21 @@
+package SeleniumWebdriverPractice.com.datadriven;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class DDRegistration 
+{
+	public static WebDriver driver;
+	String baseURL = "https://naveenautomationlabs.com/opencart/index.php?route=account/login";
+	
+	@Test(dataProvider="testdata")
+	public void register(String firstname, String lastname, String email, String password, String cnfpassword)
+	{
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(cnfpassword);
+		
+	}
+
+}

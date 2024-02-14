@@ -1,0 +1,26 @@
+package Utilities;
+
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+public class Hooks {
+	
+	public static Base driver;
+	
+	public static ChromeOptions options;
+	
+	@Before
+	public void setUp() 
+	{
+		driver = new Base();
+	}
+	
+	@After
+	public void teardown()
+	{
+		driver.close();
+	}
+
+}

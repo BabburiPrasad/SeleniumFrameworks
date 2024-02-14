@@ -1,0 +1,17 @@
+package com.DDF;
+
+public class RandomStringGenerator 
+{
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    public static generateRandomEmail(int lenght)
+    {
+    	
+    }
+	public static void main(String[] args) 
+	{
+		
+
+	}
+
+}

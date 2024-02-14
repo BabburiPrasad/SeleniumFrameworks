@@ -1,0 +1,13 @@
+package com.questions;
+
+import org.openqa.selenium.WebElement;
+
+public class PrintAllLinks 
+{
+	public static WebElement driver;
+	public static void main(String[] args) 
+	{
+		driver = new ChromeDriver();
+	}
+
+}

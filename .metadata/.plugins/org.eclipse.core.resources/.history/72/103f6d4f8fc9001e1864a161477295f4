@@ -1,0 +1,16 @@
+package SeleniumWebdriverPractice.com.datadriven;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+public class DDRegistration 
+{
+	public static WebDriver driver;
+	
+	@Test(dataProvider="testdata")
+	public void register(String firstname, String lastname, String email, String password, String cnfpassword)
+	{
+		
+	}
+
+}

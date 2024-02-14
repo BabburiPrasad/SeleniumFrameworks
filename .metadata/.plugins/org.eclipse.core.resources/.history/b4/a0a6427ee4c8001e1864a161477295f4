@@ -1,0 +1,15 @@
+package com.dataprovider;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestDDT 
+{
+	public static WebDriver drive;
+	
+	@Test(dataProvider = "testdata")
+	public void login(String username, String password)
+	{
+		
+	}
+
+}

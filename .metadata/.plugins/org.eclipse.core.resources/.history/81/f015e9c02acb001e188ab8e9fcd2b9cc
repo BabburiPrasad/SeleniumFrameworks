@@ -1,0 +1,15 @@
+fnametextbox = //input[@id='input-lastname']
+lnametextbox = //input[@id='input-email']
+emailtextbox =
+phonenumtextbox =
+passwordtextbox =
+confirmtextbox =
+radiobutton =
+termndcondchecktbox =
+continubutton =
+
+FirstName = Mr
+LastName = Test
+Phone = 9876543210
+Password = Test@123
+CnfPassword = Test@123

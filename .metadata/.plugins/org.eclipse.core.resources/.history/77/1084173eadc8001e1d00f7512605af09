@@ -1,0 +1,10 @@
+package com.screenshot;
+
+public class ScreemShot {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

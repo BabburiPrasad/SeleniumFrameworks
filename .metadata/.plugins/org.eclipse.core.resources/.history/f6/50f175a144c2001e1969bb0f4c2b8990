@@ -1,0 +1,28 @@
+package Utilities;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseDriver{
+	
+	public static WebDriver driver;
+	
+	public ChromeOptions options;
+	
+	public Base(ChromeDriver driver)
+	{
+		this.driver = Base.driver;
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+	}
+	
+	public void close()
+	{
+		driver.close();
+	}
+
+}

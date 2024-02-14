@@ -1,0 +1,42 @@
+package com.actionsclass;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class MouseHoverOperations {
+	public static WebDriver driver;
+	public static String baseUrl = "https://www.flipkart.com/";
+
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get(baseUrl);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		WebElement motors = driver.findElement(By.xpath("(//a[@_sp='p4375194.m1380.l3250'])[1]"));
+		
+//		WebElement fashion = driver.findElement(By.xpath("//img[@alt='Fashion']"));
+//		WebElement womensEthnic = driver.findElement(By.xpath("//a[@class='_1BJVlg _11MZbx']"));
+//		WebElement womenSaree = driver.findElement(By.xpath("(//a[@class='_3490ry'])[2]"));
+		
+		Actions act = new Actions(driver);
+		
+		act.moveToElement(fashion).click().build().perform();
+		Thread.sleep(3000);
+		act.moveToElement(womensEthnic).build().perform();
+		Thread.sleep(5000);
+		act.moveToElement(womenSaree).build().perform();
+		
+	}
+
+}

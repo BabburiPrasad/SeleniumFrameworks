@@ -1,0 +1,12 @@
+package com.DDF;
+
+public class RandEmailId 
+{
+
+	public static void main(String[] args) 
+	{
+		
+
+	}
+
+}

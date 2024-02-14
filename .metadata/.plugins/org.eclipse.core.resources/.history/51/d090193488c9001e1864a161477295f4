@@ -1,0 +1,17 @@
+package SeleniumWebdriverPractice.com.datadriven;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class ReadExcelFile 
+{
+
+	public ReadExcelFile()
+	{
+		String excelpath = "C:\\Users\\HP\\Documents\\TestData";
+		
+		FileInputStream stream = new FileInputStream();
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.multiwindowshandle;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ParentChildWindows {
+	public static WebDriver driver;
+
+	public static void main(String[] args) 
+	{
+		String baseURL = "https://demoqa.com/browser-windows";
+		
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get(baseURL);
+		
+		WebElement String parentwindow = driver.getWindowHandle();
+		
+
+	}
+
+}

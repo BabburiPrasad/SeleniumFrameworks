@@ -1,0 +1,19 @@
+package com.multiwindowshandle;
+
+public class MultiWindowHandle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/* MULTI WINDOW HANDLE
+		 * 
+		 * 1. get.WindowHandle(): gets the details of current widow of current window and return String
+		 * 2. get.WindowHandles(): gets the details of all the windows and returns Alpah-Numaric String
+		 * 3. Set <String> Command = driver.get.WindowHandles()
+		 * 
+		 * 4. SwitchTo(): helps switching between the windows
+		 * 
+		 * */
+
+	}
+
+}

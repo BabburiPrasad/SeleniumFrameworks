@@ -1,0 +1,13 @@
+package SeleniumWebdriverPractice.com.datadriven;
+
+public class ReadExcelFile 
+{
+
+	public ReadExcelFile()
+	{
+		String excelpath = "C:\\Users\\HP\\Documents\\TestData";
+		File fl = new File(excelpath);
+		
+	}
+
+}

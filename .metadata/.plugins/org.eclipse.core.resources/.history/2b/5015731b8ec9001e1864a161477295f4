@@ -1,0 +1,42 @@
+package SeleniumWebdriverPractice.com.datadriven;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class ReadExcelFile 
+{
+	XSSFWorkbook workbook;
+	XSSFSheet sheet;
+
+	public ReadExcelFile()
+	{
+		String excelpath = "C:\\Users\\HP\\Documents\\TestData";
+		
+		try 
+		{
+			File fl = new File(excelpath);
+			FileInputStream stream = new FileInputStream(fl);
+			workbook = new XSSFWorkbook(stream);
+			
+		} catch (FileNotFoundException IOException ) 
+		{
+			//e.printStackTrace();
+			System.out.println("Test Data File Not found");
+		}
+		
+	}
+	
+	public String getData()
+	{
+		sheet = workbook.getSheetAt(sheetnumber);
+		return getdata;
+	}
+	
+
+	
+}

@@ -1,0 +1,37 @@
+package com.multiwindowshandle;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/* MULTI WINDOW HANDLE
+ * 
+ * 1. get.WindowHandle(): gets the details of current widow of current window and return String
+ * 2. get.WindowHandles(): gets the details of all the windows and returns Alpah-Numaric String
+ * 3. Set <String> Command = driver.get.WindowHandles()
+ * 
+ * 4. SwitchTo(): helps switching between the windows
+ * 5. Action(): command used to perform actions on the current window
+ * 
+ * */
+
+public class MultiWindowHandle {
+	public static WebDriver driver;
+
+	public static void main(String[] args) 
+	{
+		String baseURL ="https://demoqa.com/browser-windows";
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get(baseURL);
+		
+		WebElement newtabButton = driver.findElement(By.xpath("//button[@id='tabButton']"));
+		
+		newtabButton.click();
+		
+
+	}
+
+}

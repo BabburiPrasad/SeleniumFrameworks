@@ -1,0 +1,14 @@
+package com.multiwindowshandle;
+
+import org.openqa.selenium.WebDriver;
+
+public class NaukriMultiWindow 
+{
+	public static WebDriver driver;
+	
+	public void testMultiWindow()
+	{
+		
+	}
+
+}

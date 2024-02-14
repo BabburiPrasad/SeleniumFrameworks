@@ -1,0 +1,26 @@
+package com.DDF;
+
+import java.security.SecureRandom;
+import java.util.Random;
+
+public class RandomStringGenerator 
+{
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    private static final SecureRandom random = new SecureRandom();
+    
+    public static String generateRandomEmail(int length)
+    {
+    	
+        // @mailnator.com
+    }
+	public static void main(String[] args) 
+	{
+		int length = 10;
+    	String randomstring = generateRandomString(length);
+    	String domain = "@mailnator.com";
+    	String email = randomstring + domain;
+        
+        System.out.println("Random Email: " +email);
+	}
+
+}
