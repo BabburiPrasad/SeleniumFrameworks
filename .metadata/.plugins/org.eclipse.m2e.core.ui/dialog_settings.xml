@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\HP\Documents\SeleniumPractice\com.datadriven"/>
 			<item value="C:\Users\HP\Documents\SeleniumPractice\prasad"/>
 			<item value="C:\Users\HP\Documents\SeleniumPractice"/>
 			<item value="C:\Users\HP\Documents\SeleniumPractice\BasicsP"/>
@@ -29,6 +30,8 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="SeleniumWebdriverPractice.HybridFramework"/>
+			<item value="SeleniumWebdriverPractice.KeywordDrivenF"/>
 			<item value="SeleniumWebdriverPractice.com.datadriven"/>
 			<item value="SeleniumWebdriverPractice.com.datadrivern"/>
 			<item value="SeleniumWebdriverPractice.prasad"/>
@@ -37,6 +40,8 @@
 			<item value="SeleniumWebdriverPractice"/>
 		</list>
 		<list key="artifactId">
+			<item value="HybridFramework"/>
+			<item value="KeywordDrivenF"/>
 			<item value="com.datadriven"/>
 			<item value="com.datadrivern"/>
 			<item value="prasad"/>
