@@ -1,7 +1,0 @@
-package com.dataprovider;
-
-public class TestDDT 
-{
-	public static WebDriver drive;
-
-}
